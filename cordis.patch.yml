@@ -1,0 +1,17 @@
+# One-command install: this layer inserts the four plugin rows that the four
+# individual bundles would insert. A row references a package by name, so the
+# four packages must be dependencies of this one (see package.json) and land in
+# the profile's node_modules.
+#
+# ids are the same ones the individual plugins use on purpose: a profile should
+# install either this toolbox or the individual bundles, never both (duplicate
+# rows would register the same tool names twice).
+- insert:
+    - id: deterministic-tools
+      name: dsh-deterministic-tools
+    - id: jvm-doctor
+      name: dsh-jvm-doctor
+    - id: py-doctor
+      name: dsh-py-doctor
+    - id: win-native
+      name: dsh-win-native
