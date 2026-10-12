@@ -2,7 +2,7 @@
 
 **一条命令，给 DSH 装上 46 个确定性工具**：JSON/YAML/CSV/文本/编码/正则这类"格式活"，加上 JVM、Python、Windows 生产报告的"诊断活"。纯本地、无网络、无安装期脚本、无二进制依赖。
 
-[![npm](https://img.shields.io/npm/v/dsh-dev-toolbox)](https://www.npmjs.com/package/dsh-dev-toolbox)
+[![npm](https://img.shields.io/npm/v/@ax2zicode/dsh-dev-toolbox)](https://www.npmjs.com/package/@ax2zicode/dsh-dev-toolbox)
 ![tools](https://img.shields.io/badge/tools-46-blue)
 ![tests](https://img.shields.io/badge/tests-214%20passing-brightgreen)
 ![offline](https://img.shields.io/badge/network-none-informational)
@@ -17,6 +17,8 @@ dsh plugin --profile web add @ax2zicode/dsh-dev-toolbox
 ```
 
 装完**重启应用**（bundle 列表是启动时读的）。想装到桌面版就把 `web` 换成 `desktop`。
+
+**家族总览**：[zicode.com/software](https://zicode.com/software/) 是四个插件、合装包与桌面软件的统一入口。
 
 离线或固定版本：
 
