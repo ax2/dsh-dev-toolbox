@@ -1,5 +1,5 @@
 {
-  "name": "dsh-dev-toolbox",
+  "name": "@ax2zicode/dsh-dev-toolbox",
   "version": "0.1.0",
   "description": "DSH plugin bundle: one command installs four deterministic, offline plugins (46 tools) covering JSON/YAML/CSV/diff/regex/encoding chores plus JVM, Python and Windows production diagnostics. Ships no code of its own — it inserts the four bundle rows, and the four plugins stay independently versioned.",
   "type": "module",

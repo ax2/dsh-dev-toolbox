@@ -10,8 +10,10 @@
 
 ## 30 秒安装
 
+> **npm 包名带 scope**：`@ax2zicode/dsh-dev-toolbox`。无 scope 的 `dsh-dev-toolbox` 会被 npm 拒（与生态里已有的 `dsh-devtoolbox` 太相似，防抢注保护），GitHub 仓库仍是 [`ax2/dsh-dev-toolbox`](https://github.com/ax2/dsh-dev-toolbox)。
+
 ```sh
-dsh plugin --profile web add dsh-dev-toolbox
+dsh plugin --profile web add @ax2zicode/dsh-dev-toolbox
 ```
 
 装完**重启应用**（bundle 列表是启动时读的）。想装到桌面版就把 `web` 换成 `desktop`。
