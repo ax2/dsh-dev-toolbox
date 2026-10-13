@@ -1,6 +1,6 @@
 {
-  "name": "@ax2zicode/dsh-dev-toolbox",
-  "version": "0.1.1",
+  "name": "dsh-toolbox-bundle",
+  "version": "0.1.2",
   "description": "DSH plugin bundle: one command installs four deterministic, offline plugins (46 tools) covering JSON/YAML/CSV/diff/regex/encoding chores plus JVM, Python and Windows production diagnostics. Ships no code of its own — it inserts the four bundle rows, and the four plugins stay independently versioned.",
   "type": "module",
   "files": [
@@ -56,11 +56,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ax2/dsh-dev-toolbox.git"
+    "url": "git+https://github.com/ax2/dsh-toolbox-bundle.git"
   },
   "homepage": "https://zicode.com/software/",
   "bugs": {
-    "url": "https://github.com/ax2/dsh-dev-toolbox/issues"
+    "url": "https://github.com/ax2/dsh-toolbox-bundle/issues"
   },
   "publishConfig": {
     "access": "public"
@@ -71,9 +71,9 @@
     }
   },
   "dependencies": {
-    "dsh-deterministic-tools": "^0.1.5",
-    "dsh-jvm-doctor": "^0.1.4",
-    "dsh-py-doctor": "^0.1.4",
-    "dsh-win-native": "^0.1.4"
+    "dsh-deterministic-tools": "^0.1.6",
+    "dsh-jvm-doctor": "^0.1.5",
+    "dsh-py-doctor": "^0.1.5",
+    "dsh-win-native": "^0.1.5"
   }
 }

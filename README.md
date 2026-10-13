@@ -1,8 +1,8 @@
-# dsh-dev-toolbox
+# dsh-toolbox-bundle
 
 **一条命令，给 DSH 装上 46 个确定性工具**：JSON/YAML/CSV/文本/编码/正则这类"格式活"，加上 JVM、Python、Windows 生产报告的"诊断活"。纯本地、无网络、无安装期脚本、无二进制依赖。
 
-[![npm](https://img.shields.io/npm/v/@ax2zicode/dsh-dev-toolbox)](https://www.npmjs.com/package/@ax2zicode/dsh-dev-toolbox)
+[![npm](https://img.shields.io/npm/v/dsh-toolbox-bundle)](https://www.npmjs.com/package/dsh-toolbox-bundle)
 ![tools](https://img.shields.io/badge/tools-46-blue)
 ![tests](https://img.shields.io/badge/tests-214%20passing-brightgreen)
 ![offline](https://img.shields.io/badge/network-none-informational)
@@ -10,10 +10,10 @@
 
 ## 30 秒安装
 
-> **npm 包名带 scope**：`@ax2zicode/dsh-dev-toolbox`。无 scope 的 `dsh-dev-toolbox` 会被 npm 拒（与生态里已有的 `dsh-devtoolbox` 太相似，防抢注保护），GitHub 仓库仍是 [`ax2/dsh-dev-toolbox`](https://github.com/ax2/dsh-dev-toolbox)。
+> **包名与仓库**：npm 上是 `dsh-toolbox-bundle`，仓库是 [`ax2/dsh-toolbox-bundle`](https://github.com/ax2/dsh-toolbox-bundle)。（前身 `dsh-zidev-toolbox`、`@ax2zicode/dsh-dev-toolbox` 都已在 npm 上废弃并指向这里——`dsh-dev-toolbox` 这个名字发不出去：npm 判定它与生态里已有的 `dsh-devtoolbox` 过于相似。）
 
 ```sh
-dsh plugin --profile web add @ax2zicode/dsh-dev-toolbox
+dsh plugin --profile web add dsh-toolbox-bundle
 ```
 
 装完**重启应用**（bundle 列表是启动时读的）。想装到桌面版就把 `web` 换成 `desktop`。
@@ -23,7 +23,7 @@ dsh plugin --profile web add @ax2zicode/dsh-dev-toolbox
 离线或固定版本：
 
 ```sh
-dsh plugin --profile web add https://github.com/ax2/dsh-dev-toolbox/releases/latest/download/dsh-dev-toolbox.tgz
+dsh plugin --profile web add https://github.com/ax2/dsh-toolbox-bundle/releases/latest/download/dsh-toolbox-bundle.tgz
 ```
 
 > 这个包是**四个独立插件的合装层**：它一次插入四行 bundle，四个插件仍各自独立版本。**不要**把它和单独安装的那四个混用（会重复注册同名工具）。
@@ -101,7 +101,7 @@ KeyError: 'user_id'
     toolPrefix: zi
 ```
 
-（29 个裁到 5 个，固定税从约 3.4k 降到约 0.6k tokens/请求。实测有效：真实启动后模型只收到 `zi__json_format`、`zi__json_validate`。）
+（同一任务实测三组首次请求 prompt：干净 base 75 个工具名 **12,838** → 只留 5 个 **13,529**（+0.7k）→ 装全部 29 个 **16,799**（+4.0k）。裁剪配置要写进 **profile 自己的** `cordis.patch.yml`（文件头写着 "applied after every bundle layer"）；用 `dsh --patch <file>` 那种 CLI 覆盖层改同一个 id 会报 `patch: entry "deterministic-tools" not found`。真实启动后模型只收到 `zi__json_format`、`zi__json_validate`。）
 
 ## 边界
 
